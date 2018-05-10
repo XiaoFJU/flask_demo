@@ -1,0 +1,8 @@
+__pycache__/
+model/__pycache__/
+
+.vscode/
+.DS_Store
+.idea/
+
+config.py
