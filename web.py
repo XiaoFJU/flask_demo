@@ -15,8 +15,10 @@ def show_page(page):
         return render_template('pages/{}.html'.format(page))
 
 
-@app.route('/page/crawler', methods=['POST'])
+@app.route('/page/crawler', methods=['GET', 'POST'])
 def page_crawler():
+    if request.method == 'GET':
+        return render_template('crawler.html')  
     if request.method == 'POST':
         file_name = request.form['file_name']
         url =  request.form['url']
