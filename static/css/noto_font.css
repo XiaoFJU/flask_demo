@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+.noto {
+    font-family: 'Noto Sans TC', sans-serif !important;
+}
+
+.noto300 {
+    font-family: 'Noto Sans TC', sans-serif !important;
+    font-weight: 300 !important
+}
+
+.noto100 {
+    font-family: 'Noto Sans TC', sans-serif !important;
+    font-weight: 100 !important
+}
+
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+strong {
+    font-family: 'Noto Sans TC', sans-serif !important;
+}
