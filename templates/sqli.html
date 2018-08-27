@@ -1,0 +1,35 @@
+{{% extends "layouts/layout.html" %}}
+
+{{% block head %}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{< url_for('static', filename='css/sqli.css') >}}">
+{{% endblock %}}
+
+{{% block body %}}
+<div class="container" id="app">
+    <div class="code-area">
+        <pre>SELECT name, phone, email FROM accounts</pre>
+        <pre>WHERE name = "<span class="input-code">{{ account }}</span>"</pre>
+        <pre>  AND password = "<span class="input-code">{{ password }}</span>";</pre>
+    </div>
+    <div class="input-bar">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">帳號</span>
+            </div>
+            <textarea class="form-control" v-model:value="account" aria-label="Account" autofocus="autofocus"></textarea>
+        </div>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">密碼</span>
+            </div>
+            <textarea class="form-control" v-model:value="password" type="password" aria-label="Password"></textarea>
+        </div>
+    </div>
+</div>
+{{% endblock %}}
+
+{{% block footer %}}
+<script src="{{< url_for('static', filename='js/sqli.js') >}}"></script>
+{{% endblock %}}

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI 結果</title>
+</head>
+<body>
+    <span>您好， {{< name >}}</span>
+    <p>您的 BMI 為 {{< '%0.2f' % bmi|float >}}， 
+        屬於 {{< result >}} 範圍。 </p>
+</body>
+</html>
